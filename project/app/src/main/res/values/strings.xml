@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">QSboard</string>
+
+    <!-- Strings related to Settings -->
+
+    <!-- Example General settings -->
+    <string name="pref_header_general">General</string>
+
+    <string name="pref_dummy">Title</string>
+    <string name="pref_dummy_sum">Summary</string>
+
+</resources>
