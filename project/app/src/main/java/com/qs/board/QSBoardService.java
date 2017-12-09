@@ -48,7 +48,7 @@ public class QSBoardService
     @Override
     public void onClick() {
 
-        Intent dialog = new Intent(this, DialogActivity.class);
+        Intent dialog = new Intent(this, BoardActivity.class);
 
         startActivityAndCollapse(dialog);
     }

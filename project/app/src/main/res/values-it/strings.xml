@@ -1,5 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="pref_dummy">Titolo</string>
-    <string name="pref_dummy_sum">Sommario</string>
+    <string name="pref_theme_title">Colore accento</string>
+    <string name="themesum">Cambia il colore dell\'accento</string>
+    <string name="default_theme">Predefinito</string>
+    <string name="red">Rosso</string>
+    <string name="pink">Rosa</string>
+    <string name="purple">Viola</string>
+    <string name="deepPurple">Viola scuro</string>
+    <string name="indigo">Indaco</string>
+    <string name="blue">Blu</string>
+    <string name="lightBlue">Blu chiaro</string>
+    <string name="cyan">Ciano</string>
+    <string name="teal">Alzavola</string>
+    <string name="green">Verde</string>
+    <string name="amber">Ambra</string>
+    <string name="orange">Arancio</string>
+    <string name="deepOrange">Arancio scuro</string>
+    <string name="brown">Marrone</string>
+    <string name="blueGrey">Grigio blu</string>
 </resources>
