@@ -20,7 +20,7 @@ public class SettingsActivity extends Activity {
     }
 
     /**
-     * This fragment shows the launcher preferences.
+     * This fragment shows the preferences.
      */
     public static class SettingsFragment extends PreferenceFragment {
 
