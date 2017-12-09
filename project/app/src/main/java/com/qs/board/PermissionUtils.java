@@ -12,15 +12,14 @@ class PermissionUtils {
     static final String READ_CONTACTS = Manifest.permission.READ_CONTACTS;
     static final String CALL_PHONE = Manifest.permission.CALL_PHONE;
 
-    //Manifest.permission.CALL_PHONE
     static void requestCallPermission(Activity activity) {
-        activity.requestPermissions(new String[]{Manifest.permission.CALL_PHONE}
+        activity.requestPermissions(new String[]{CALL_PHONE}
                 , CALL_REQUEST_CODE);
     }
 
     static void requestContactPermission(Activity activity) {
 
-        activity.requestPermissions(new String[]{Manifest.permission.READ_CONTACTS}
+        activity.requestPermissions(new String[]{READ_CONTACTS}
                 , CONTACT_REQUEST_CODE);
     }
 
