@@ -23,7 +23,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".DialogActivity"
+            android:name=".BoardActivity"
             android:autoRemoveFromRecents="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.Transparent"
