@@ -2,7 +2,11 @@
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="android:Theme.Material.Light">
-        <!-- Customize your theme here. -->
     </style>
 
+    <style name="Theme.Transparent" parent="@android:style/Theme.Material">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@color/transparent_black</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
 </resources>

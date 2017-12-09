@@ -1,13 +1,17 @@
 package com.qs.board;
 
+import android.app.ActionBar;
 import android.app.Activity;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.preference.PreferenceFragment;
+import android.view.MenuItem;
 import android.widget.Toast;
 
 public class SettingsActivity extends Activity {
+
+    private ActionBar mActionBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -15,7 +19,20 @@ public class SettingsActivity extends Activity {
 
         setContentView(R.layout.settings_activity);
 
+        mActionBar = getActionBar();
+
         managePermissions();
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem menuItem) {
+        switch (menuItem.getItemId()) {
+            case android.R.id.home:
+                onBackPressed();
+                return true;
+            default:
+                return super.onOptionsItemSelected(menuItem);
+        }
     }
 
     private void startSettings() {
@@ -27,6 +44,8 @@ public class SettingsActivity extends Activity {
         getFragmentManager().beginTransaction()
                 .replace(R.id.content_frame, new SettingsFragment())
                 .commit();
+
+        mActionBar.setDisplayHomeAsUpEnabled(true);
     }
 
     @Override
@@ -56,6 +75,8 @@ public class SettingsActivity extends Activity {
         if (PermissionUtils.checkPermission(this, PermissionUtils.READ_CONTACTS) && PermissionUtils.checkPermission(this, PermissionUtils.CALL_PHONE)) {
 
             PermissionUtils.requestContactPermission(this);
+        } else {
+            startSettings();
         }
     }
 

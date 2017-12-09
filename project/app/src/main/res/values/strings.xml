@@ -4,5 +4,6 @@
     <!-- Strings related to Settings -->
     <string name="pref_dummy">Title</string>
     <string name="pref_dummy_sum">Summary</string>
+    <string name="tile_label" translatable="false">Board</string>
 
 </resources>
