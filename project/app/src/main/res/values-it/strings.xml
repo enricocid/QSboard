@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="how">Usa un QS tile o una notifica, o entrambe, per avere una scorciatoria di SBboard nella status bar :D</string>
     <string name="options">Opzioni</string>
     <string name="pref_theme_title">Colore accento</string>
     <string name="themesum">Cambia il colore dell\'accento</string>
@@ -36,7 +37,7 @@
     <string name="board_alpha">Trasparenza board:&#160;</string>
     <string name="immersive_title">Modalità immersive</string>
     <string name="notification_title">Aggiungi scorciatoia nella status bar</string>
-    <string name="notification_sum">Usa una notifica sulla status bar come scorciatoia a QSboard</string>
+    <string name="notification_sum">Usa una notifica sulla status bar come scorciatoia a SBboard</string>
     <string name="notification_content">Clicca per accedere a QSboard</string>
 
 </resources>

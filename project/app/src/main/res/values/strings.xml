@@ -1,5 +1,6 @@
 <resources>
-    <string name="app_name">QSboard</string>
+    <string name="app_name">SBboard</string>
+    <string name="how">Use the QS tile or a notification, or both, to add a shortcut to SBboard on status bar :D</string>
     <string name="tile_label" translatable="false">Board</string>
     <string name="options">Options</string>
     <string name="u_sure">Are you sure?</string>
@@ -20,7 +21,7 @@
     <string name="immersive_on" translatable="false">ON</string>
     <string name="immersive_off" translatable="false">OFF</string>
     <string name="notification_title">Add shortcut to status bar</string>
-    <string name="notification_sum">Use a notification on status bar as a shortcut to QSboard</string>
+    <string name="notification_sum">Use a notification on status bar as a shortcut to SBboard</string>
     <string name="notification_content">Click to open QSboard</string>
 
     <!-- Strings related to Settings -->
