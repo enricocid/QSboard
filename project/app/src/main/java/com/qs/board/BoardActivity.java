@@ -98,6 +98,7 @@ public class BoardActivity extends Activity {
 
                 Intent options = new Intent(BoardActivity.this, SettingsActivity.class);
                 startActivity(options);
+                finishAndRemoveTask();
             }
         });
 
