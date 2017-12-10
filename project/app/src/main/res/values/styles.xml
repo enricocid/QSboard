@@ -2,7 +2,8 @@
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="android:Theme.Material.Light">
-
+        <item name="android:colorPrimaryDark">@color/accent</item>
+        <item name="android:colorAccent">@color/accent</item>
     </style>
 
     <style name="DialogTheme" parent="@android:style/Theme.Material.Light.Dialog">
