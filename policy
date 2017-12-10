@@ -1,0 +1,21 @@
+# PRIVACY POLICY
+
+Me, Enrico D'Ortenzio, built the this app as an Open Source app. This APP is provided by Me at no cost and is intended for use as is: A board with frequent/starred contacts and notes.
+
+This page is used to inform Users regarding my policies with the use of the following permissions if anyone decided to use my App:
+
+- android.permission.READ_CONTACTS:
+
+This permission will be exclusively used to ALLOW USER TO DISPLAY FREQUENT CONTACTS from within the App. The permission won't be used to collect or send/share data to third parties.
+Moreover, users using Android version >= Marshmallow will be allowed to allow or deny this permission (but frequent contacts won't work).
+
+- android.permission.CALL_PHONE:
+
+This permission will be exclusively used to ALLOW USER TO CALL FREQUENT CONTACTS from within the App. The permission won't be used to collect or send/share data to third parties.
+Moreover, users using Android version >= Marshmallow will be allowed to allow or deny this permission (but calls won't work).
+
+
+
+Best regards,
+
+Enrico D'Ortenzio

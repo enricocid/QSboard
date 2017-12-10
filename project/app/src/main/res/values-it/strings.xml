@@ -41,4 +41,6 @@
     <string name="notification_sum">Usa una notifica sulla status bar come scorciatoia a SBboard</string>
     <string name="notification_content">Clicca per accedere a QSboard</string>
 
+    <string name="privacy_policy_sum">Clicca per leggere l\'informativa sui permessi richiesti</string>
+    <string name="git">Codice sorgente</string>
 </resources>

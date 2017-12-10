@@ -6,14 +6,14 @@
     android:orientation="vertical">
 
     <TextView
+        android:id="@+id/message"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:padding="8dp"
-        android:text="@string/how"
-        android:textSize="16sp"
         android:textAlignment="center"
         android:textColorHint="@android:color/secondary_text_light_nodisable"
+        android:textSize="16sp"
         android:textStyle="italic" />
 
     <!-- Layout for preferences -->

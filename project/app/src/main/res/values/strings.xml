@@ -4,6 +4,7 @@
     <string name="how">Use the QS tile or a notification, or both, to add a shortcut to SBboard on status bar :D</string>
     <string name="tile_label" translatable="false">Board</string>
     <string name="options">Options</string>
+    <string name="about" translatable="false">About</string>
     <string name="u_sure">Are you sure?</string>
     <string name="delete">Delete</string>
     <string name="notes">Notes</string>
@@ -45,4 +46,11 @@
     <string name="deepOrange">Deep orange</string>
     <string name="brown">Brown</string>
     <string name="blueGrey">Blue grey</string>
+
+    <string name="privacy_policy" translatable="false">Privacy policy</string>
+    <string name="privacy_policy_sum">Click to read the policy about requested permissions</string>
+    <string name="privacy_policy_link" translatable="false">https://raw.githubusercontent.com/enricocid/SBboard/master/policy</string>
+
+    <string name="git">Source code</string>
+    <string name="git_link" translatable="false">https://github.com/enricocid/SBboard</string>
 </resources>
