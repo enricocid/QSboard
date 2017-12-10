@@ -12,6 +12,6 @@ The app itself is very simple:
 - Various settings to manage the board: accent, alpha, board title, immersive mode;
 - Quick settings tile and/or notification as shortcuts to SBboard;
 
-*APK (Alpha):* https://github.com/enricocid/SBboard/raw/master/app-debug.apk
+*APK (Alpha):* https://github.com/enricocid/SBboard/raw/master/app-release.apk
 
 *Soon on Google Play Store*
