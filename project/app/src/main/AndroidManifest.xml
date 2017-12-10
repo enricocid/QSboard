@@ -36,7 +36,7 @@
         <service
             android:name=".QSBoardService"
             android:icon="@drawable/ic_add_circle"
-            android:label="@string/tile_label"
+            android:label="@string/app_name"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
             <intent-filter>
                 <action
