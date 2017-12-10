@@ -14,4 +14,4 @@ The app itself is very simple:
 
 *APK (Alpha):* https://github.com/enricocid/SBboard/raw/master/app-release.apk
 
-*Soon on Google Play Store*
+*Google Play Store (Alpha):* https://play.google.com/apps/testing/com.qs.board
