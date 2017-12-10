@@ -50,7 +50,7 @@ public class NotificationUtils {
         }
     }
 
-    public class NotificationReceiver extends BroadcastReceiver {
+    public static class NotificationReceiver extends BroadcastReceiver {
 
         @Override
         public void onReceive(Context context, Intent intent) {
