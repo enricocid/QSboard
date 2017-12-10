@@ -1,7 +1,9 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="android:Theme.Material.Light"></style>
+    <style name="AppTheme" parent="android:Theme.Material.Light">
+
+    </style>
 
     <style name="Theme.Transparent" parent="@android:style/Theme.Material">
         <item name="android:windowIsTranslucent">true</item>

@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">QSboard</string>
     <string name="tile_label" translatable="false">Board</string>
+    <string name="options">Options</string>
 
     <!-- Strings related to Settings -->
     <string name="pref_theme_title">Accent color</string>

@@ -1,9 +1,11 @@
 package com.qs.board;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.ContextThemeWrapper;
+import android.view.Menu;
 import android.view.MenuItem;
 
 public class BoardActivity extends Activity {
@@ -14,9 +16,20 @@ public class BoardActivity extends Activity {
             case android.R.id.home:
                 finish();
                 return true;
+            case R.id.options:
+                Intent options = new Intent(this, SettingsActivity.class);
+                startActivity(options);
+                return true;
             default:
                 return super.onOptionsItemSelected(menuItem);
         }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+
+        getMenuInflater().inflate(R.menu.options_menu, menu);
+        return super.onCreateOptionsMenu(menu);
     }
 
     @Override
