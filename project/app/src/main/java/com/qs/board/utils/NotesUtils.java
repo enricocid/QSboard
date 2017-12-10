@@ -15,10 +15,6 @@ import java.util.ArrayList;
 import static android.content.Context.INPUT_METHOD_SERVICE;
 import static android.content.Context.MODE_PRIVATE;
 
-/**
- * Created by Enrico on 04/08/2017.
- */
-
 public class NotesUtils {
 
     public static ArrayList<String> initNoteElement(Activity activity, String[] who) {

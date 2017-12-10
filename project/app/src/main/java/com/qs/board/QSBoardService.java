@@ -23,49 +23,28 @@ import android.util.Log;
 public class QSBoardService
         extends TileService {
 
-    /**
-     * Called when the tile is added to the Quick Settings.
-     *
-     * @return TileService constant indicating tile state
-     */
-
     @Override
     public void onTileAdded() {
 
     }
 
-    /**
-     * Called when this tile begins listening for events.
-     */
     @Override
     public void onStartListening() {
 
     }
 
-    /**
-     * Called when the user taps the tile.
-     */
     @Override
     public void onClick() {
 
         Intent dialog = new Intent(this, BoardActivity.class);
-
         startActivityAndCollapse(dialog);
     }
 
-    /**
-     * Called when this tile moves out of the listening state.
-     */
     @Override
     public void onStopListening() {
-        Log.d("QS", "Stop Listening");
     }
 
-    /**
-     * Called when the user removes this tile from Quick Settings.
-     */
     @Override
     public void onTileRemoved() {
-        Log.d("QS", "Tile removed");
     }
 }

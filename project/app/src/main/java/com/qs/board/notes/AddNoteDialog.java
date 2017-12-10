@@ -27,10 +27,6 @@ import java.util.Calendar;
 
 import static android.content.Context.MODE_PRIVATE;
 
-/**
- * Created by Enrico on 25/07/2017.
- */
-
 public class AddNoteDialog extends DialogFragment {
 
     public static void show(Activity activity, boolean show) {

@@ -6,10 +6,6 @@ import com.qs.board.R;
 
 import java.util.Random;
 
-/**
- * Created by Enrico on 10/12/2017.
- */
-
 public class ColorUtils {
 
     //create an array of colors that will populate the recycler view

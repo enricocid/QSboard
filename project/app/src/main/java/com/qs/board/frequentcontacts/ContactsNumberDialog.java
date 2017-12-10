@@ -16,10 +16,6 @@ import com.qs.board.R;
 
 import java.util.ArrayList;
 
-/**
- * Created by Enrico on 25/07/2017.
- */
-
 public class ContactsNumberDialog extends DialogFragment {
 
     @Override

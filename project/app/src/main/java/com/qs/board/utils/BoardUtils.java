@@ -6,10 +6,6 @@ import android.preference.PreferenceManager;
 import com.qs.board.R;
 import com.qs.board.preferences.PreferenceKeys;
 
-/**
- * Created by Enrico on 25/09/2017.
- */
-
 public class BoardUtils {
 
     //retrieve board title

@@ -8,9 +8,6 @@ import android.preference.PreferenceFragment;
 import com.qs.board.R;
 import com.qs.board.utils.BoardUtils;
 
-/**
- * This fragment shows the preferences.
- */
 public class SettingsFragment extends PreferenceFragment {
 
     private SharedPreferences.OnSharedPreferenceChangeListener mListenerOptions;

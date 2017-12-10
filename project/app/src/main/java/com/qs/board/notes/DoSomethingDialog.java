@@ -13,10 +13,6 @@ import android.widget.ImageButton;
 
 import com.qs.board.R;
 
-/**
- * Created by Enrico on 25/07/2017.
- */
-
 public class DoSomethingDialog extends DialogFragment {
 
     @Override
