@@ -3,10 +3,12 @@ package com.qs.board.preferences;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.EditTextPreference;
+import android.preference.Preference;
 import android.preference.PreferenceFragment;
 
 import com.qs.board.R;
 import com.qs.board.utils.BoardUtils;
+import com.qs.board.utils.NotificationUtils;
 
 public class SettingsFragment extends PreferenceFragment {
 
@@ -22,6 +24,15 @@ public class SettingsFragment extends PreferenceFragment {
         mTitlePref = (EditTextPreference) findPreference(PreferenceKeys.BOARD_TITLE_KEY);
 
         mTitlePref.setSummary(BoardUtils.getBoardTitle(getActivity()));
+
+        final Preference addNotification = findPreference(PreferenceKeys.NOTIFICATION_KEY);
+        addNotification.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+            @Override
+            public boolean onPreferenceClick(Preference preference) {
+                NotificationUtils.addNotification(getActivity());
+                return false;
+            }
+        });
 
         mListenerOptions = new SharedPreferences.OnSharedPreferenceChangeListener() {
             @Override

@@ -19,6 +19,9 @@
     <string name="immersive_title">Immersive mode</string>
     <string name="immersive_on" translatable="false">ON</string>
     <string name="immersive_off" translatable="false">OFF</string>
+    <string name="notification_title">Add shortcut to status bar</string>
+    <string name="notification_sum">Use a notification on status bar as a shortcut to QSboard</string>
+    <string name="notification_content">Click to open QSboard</string>
 
     <!-- Strings related to Settings -->
     <string name="pref_theme_title">Accent color</string>

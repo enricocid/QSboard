@@ -35,4 +35,8 @@
     <string name="board_title">Cambia titolo board</string>
     <string name="board_alpha">Trasparenza board:&#160;</string>
     <string name="immersive_title">Modalità immersive</string>
+    <string name="notification_title">Aggiungi scorciatoia nella status bar</string>
+    <string name="notification_sum">Usa una notifica sulla status bar come scorciatoia a QSboard</string>
+    <string name="notification_content">Clicca per accedere a QSboard</string>
+
 </resources>

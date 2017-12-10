@@ -17,7 +17,6 @@ package com.qs.board;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.service.quicksettings.TileService;
-import android.util.Log;
 
 @SuppressLint("Override")
 public class QSBoardService

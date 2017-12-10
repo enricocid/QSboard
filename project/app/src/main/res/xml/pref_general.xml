@@ -18,4 +18,9 @@
         android:title="@string/immersive_title"
         android:summaryOn="@string/immersive_on"
         android:summaryOff="@string/immersive_off"/>
+
+    <Preference
+        android:key="pref_addNotification"
+        android:title="@string/notification_title"
+        android:summary="@string/notification_sum"/>
 </PreferenceScreen>
