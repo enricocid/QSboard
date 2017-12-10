@@ -2,6 +2,19 @@
     <string name="app_name">QSboard</string>
     <string name="tile_label" translatable="false">Board</string>
     <string name="options">Options</string>
+    <string name="u_sure">Are you sure?</string>
+    <string name="delete">Delete</string>
+    <string name="notes">Notes</string>
+    <string name="add">Add</string>
+    <string name="note_title">Title goes here&#8230;</string>
+    <string name="note_body">Body goes here&#8230;</string>
+    <string name="note_priority">Priority</string>
+    <string name="contacts">Frequent contacts</string>
+    <string name="choose_number">Choose number</string>
+    <string name="copied">Note copied to clipboard</string>
+    <string name="share_with">Share with&#8230;</string>
+    <string name="share">Share</string>
+    <string name="board_title">Change board title</string>
 
     <!-- Strings related to Settings -->
     <string name="pref_theme_title">Accent color</string>

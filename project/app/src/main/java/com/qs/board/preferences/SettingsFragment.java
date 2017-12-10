@@ -2,9 +2,11 @@ package com.qs.board.preferences;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.EditTextPreference;
 import android.preference.PreferenceFragment;
 
 import com.qs.board.R;
+import com.qs.board.utils.BoardUtils;
 
 /**
  * This fragment shows the preferences.
@@ -12,11 +14,16 @@ import com.qs.board.R;
 public class SettingsFragment extends PreferenceFragment {
 
     private SharedPreferences.OnSharedPreferenceChangeListener mListenerOptions;
+    private EditTextPreference mTitlePref;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         addPreferencesFromResource(R.xml.pref_general);
+
+        mTitlePref = (EditTextPreference) findPreference(PreferenceKeys.BOARD_TITLE_KEY);
+
+        mTitlePref.setSummary(BoardUtils.getBoardTitle(getActivity()));
 
         mListenerOptions = new SharedPreferences.OnSharedPreferenceChangeListener() {
             @Override
@@ -26,6 +33,9 @@ public class SettingsFragment extends PreferenceFragment {
 
                     case PreferenceKeys.CHOOSE_ACCENT_KEY:
                         getActivity().recreate();
+                        break;
+                    case PreferenceKeys.BOARD_TITLE_KEY:
+                        mTitlePref.setSummary(mTitlePref.getText());
                         break;
                 }
             }

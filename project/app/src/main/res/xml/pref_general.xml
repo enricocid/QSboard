@@ -1,8 +1,12 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <com.qs.board.ThemePreference
+    <com.qs.board.preferences.ThemePreference
         android:defaultValue="0"
         android:key="pref_chooseAccent"
         android:persistent="true"
         android:title="@string/pref_theme_title" />
+
+    <EditTextPreference
+        android:key="pref_boardTitle"
+        android:title="@string/app_name" />
 </PreferenceScreen>

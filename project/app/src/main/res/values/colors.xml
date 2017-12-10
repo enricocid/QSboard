@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <color name="transparent_black">#75000000</color>
+    <color name="transparent_black">#99000000</color>
+    <color name="neutral_priority">#90A4AE</color>
+    <color name="black">@android:color/black</color>
+    <color name="white">@android:color/white</color>
 
     <!-- Theme colors -->
     <color name="material_red_400">#EF5350</color>

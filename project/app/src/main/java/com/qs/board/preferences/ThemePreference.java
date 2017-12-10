@@ -15,6 +15,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
@@ -93,14 +94,18 @@ public class ThemePreference extends Preference {
         }
     }
 
-    private static void createCircularPreferenceBitmap(Preference preference, Context context, int color) {
+    public static void createCircularPreferenceBitmap(Boolean isImage, Preference preference, ImageView imageView, Context context, int color) {
 
         Bitmap.Config conf = Bitmap.Config.ARGB_8888;
         int dimen = (int) context.getResources().getDimension(android.R.dimen.app_icon_size);
         Bitmap bmp = Bitmap.createBitmap(dimen, dimen, conf);
 
-        preference.setIcon(createRoundedBitmapDrawable(bmp, color, context.getResources()));
+        if (isImage) {
+            imageView.setBackground(createRoundedBitmapDrawable(bmp, color, context.getResources()));
+        } else {
+            preference.setIcon(createRoundedBitmapDrawable(bmp, color, context.getResources()));
 
+        }
     }
 
     private static RoundedBitmapDrawable createRoundedBitmapDrawable(Bitmap bitmap, int color, Resources mResources) {
@@ -158,7 +163,7 @@ public class ThemePreference extends Preference {
         themeOptions = mContext.getResources().getStringArray(R.array.theme_options);
         themeValues = mContext.getResources().getStringArray(R.array.pref_theme_list_values);
         int color = ContextCompat.getColor(mContext, ThemeUtils.resolveColor(mContext));
-        createCircularPreferenceBitmap(this, mContext, color);
+        createCircularPreferenceBitmap(false, this, null, mContext, color);
 
         setDefaultValue(0);
     }

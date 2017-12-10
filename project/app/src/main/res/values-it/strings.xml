@@ -19,4 +19,19 @@
     <string name="deepOrange">Arancio scuro</string>
     <string name="brown">Marrone</string>
     <string name="blueGrey">Grigio blu</string>
+
+    <string name="u_sure">Sicuro?</string>
+    <string name="delete">Cancella</string>
+    <string name="notes">Note</string>
+    <string name="add">Aggiungi</string>
+    <string name="note_title">Qui il titolo&#8230;</string>
+    <string name="note_body">Qua il corpo&#8230;</string>
+    <string name="note_priority">Priorità</string>
+    <string name="contacts">Contatti frequenti</string>
+    <string name="choose_number">Scegli numero</string>
+    <string name="copied">Nota copiata negli appunti</string>
+    <string name="share_with">Condividi con&#8230;</string>
+    <string name="share">Condividi</string>
+    <string name="board_title">Cambia titolo board</string>
+
 </resources>

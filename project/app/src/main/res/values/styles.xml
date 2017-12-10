@@ -5,7 +5,11 @@
 
     </style>
 
-    <style name="Theme.Transparent" parent="@android:style/Theme.Material">
+    <style name="DialogTheme" parent="@android:style/Theme.Material.Light.Dialog">
+        <item name="android:textColor">@android:color/primary_text_light</item>
+    </style>
+
+    <style name="Theme.Transparent" parent="android:Theme.Material">
         <item name="android:windowIsTranslucent">true</item>
         <item name="android:windowBackground">@color/transparent_black</item>
         <item name="android:windowContentOverlay">@null</item>
