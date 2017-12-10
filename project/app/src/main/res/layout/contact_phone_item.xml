@@ -4,7 +4,7 @@
     android:id="@+id/phone"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="?android:attr/selectableItemBackground"
+    android:foreground="@drawable/ripple"
     android:maxLines="1"
     android:paddingBottom="16dp"
     android:paddingEnd="24dp"

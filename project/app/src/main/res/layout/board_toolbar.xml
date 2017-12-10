@@ -12,7 +12,7 @@
         android:layout_centerVertical="true"
         android:layout_gravity="center_vertical"
         android:layout_marginStart="16dp"
-        android:background="?android:attr/selectableItemBackground"
+        android:background="@drawable/ripple"
         android:contentDescription="@string/app_name"
         android:src="@drawable/ic_close" />
 
@@ -24,7 +24,7 @@
         android:layout_gravity="center_vertical"
         android:layout_marginStart="16dp"
         android:layout_toEndOf="@+id/back"
-        android:background="?android:attr/selectableItemBackground"
+        android:background="@drawable/ripple"
         android:contentDescription="@string/app_name"
         android:src="@drawable/ic_settings" />
 

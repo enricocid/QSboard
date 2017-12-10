@@ -6,4 +6,5 @@
     android:contentDescription="@string/app_name"
     android:maxHeight="30sp"
     android:minHeight="30sp"
+    android:background="@drawable/ripple"
     android:padding="1dp" />

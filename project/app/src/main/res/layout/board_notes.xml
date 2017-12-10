@@ -28,7 +28,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_centerInParent="true"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@drawable/ripple"
             android:contentDescription="@string/app_name"
             android:src="@drawable/ic_add_circle" />
     </RelativeLayout>
