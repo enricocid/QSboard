@@ -3,8 +3,10 @@ package com.qs.board;
 import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
 import android.view.ContextThemeWrapper;
 import android.view.Menu;
@@ -15,6 +17,7 @@ import android.widget.ImageButton;
 import com.qs.board.frequentcontacts.AsyncLoadContacts;
 import com.qs.board.notes.AddNoteDialog;
 import com.qs.board.notes.AsyncLoadNotes;
+import com.qs.board.preferences.SeekBarPreference;
 import com.qs.board.preferences.SettingsActivity;
 import com.qs.board.utils.BoardUtils;
 import com.qs.board.utils.ThemeUtils;
@@ -57,12 +60,22 @@ public class BoardActivity extends Activity {
 
         if (getActionBar() != null) {
             ActionBar actionBar = getActionBar();
+
+            int accent = ThemeUtils.getColorAccent(this);
+
+            int color = Color.argb(SeekBarPreference.getAlphaValue(this), Color.red(accent), Color.green(accent), Color.blue(accent));
+
             actionBar.setDisplayHomeAsUpEnabled(true);
-            actionBar.setBackgroundDrawable(new ColorDrawable(ThemeUtils.getColorAccent(this)));
+            actionBar.setBackgroundDrawable(new ColorDrawable(color));
             actionBar.setTitle(BoardUtils.getBoardTitle(this));
+            getWindow().setStatusBarColor(color);
         }
 
-        getWindow().setStatusBarColor(ThemeUtils.getColorAccent(this));
+        int color = ContextCompat.getColor(this, R.color.black);
+
+        int black = Color.argb(SeekBarPreference.getAlphaValue(this), Color.red(color), Color.green(color), Color.blue(color));
+
+        getWindow().setBackgroundDrawable(new ColorDrawable(black));
 
         mWeakContext = new WeakReference<Activity>(this);
 

@@ -33,5 +33,6 @@
     <string name="share_with">Condividi con&#8230;</string>
     <string name="share">Condividi</string>
     <string name="board_title">Cambia titolo board</string>
+    <string name="board_alpha">Trasparenza board:&#160;</string>
 
 </resources>

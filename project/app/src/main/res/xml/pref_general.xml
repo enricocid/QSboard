@@ -6,7 +6,10 @@
         android:persistent="true"
         android:title="@string/pref_theme_title" />
 
+    <com.qs.board.preferences.SeekBarPreference android:key="pref_alphaValue" />
+
     <EditTextPreference
         android:key="pref_boardTitle"
-        android:title="@string/app_name" />
+        android:title="@string/board_title" />
+
 </PreferenceScreen>

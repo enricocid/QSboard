@@ -11,7 +11,6 @@
 
     <style name="Theme.Transparent" parent="android:Theme.Material">
         <item name="android:windowIsTranslucent">true</item>
-        <item name="android:windowBackground">@color/transparent_black</item>
         <item name="android:windowContentOverlay">@null</item>
     </style>
 
