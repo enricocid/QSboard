@@ -12,4 +12,9 @@
         android:key="pref_boardTitle"
         android:title="@string/board_title" />
 
+    <CheckBoxPreference
+        android:key="pref_immersiveMode"
+        android:title="@string/immersive_title"
+        android:summaryOn="@string/immersive_on"
+        android:summaryOff="@string/immersive_off"/>
 </PreferenceScreen>

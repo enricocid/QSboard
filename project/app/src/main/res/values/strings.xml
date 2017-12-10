@@ -16,6 +16,9 @@
     <string name="share">Share</string>
     <string name="board_title">Change board title</string>
     <string name="board_alpha">Board alpha:&#160;</string>
+    <string name="immersive_title">Immersive mode</string>
+    <string name="immersive_on" translatable="false">ON</string>
+    <string name="immersive_off" translatable="false">OFF</string>
 
     <!-- Strings related to Settings -->
     <string name="pref_theme_title">Accent color</string>

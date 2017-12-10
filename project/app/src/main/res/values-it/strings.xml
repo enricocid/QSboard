@@ -34,5 +34,5 @@
     <string name="share">Condividi</string>
     <string name="board_title">Cambia titolo board</string>
     <string name="board_alpha">Trasparenza board:&#160;</string>
-
+    <string name="immersive_title">Modalità immersive</string>
 </resources>
