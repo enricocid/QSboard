@@ -5,7 +5,7 @@
 
 *What is SBboard?*
 
-SBboard is the standalone app featuring the board originally implement on LaunchEnr. The board contains frequent/starred contacts and a simple implementation of notes;
+SBboard is the standalone app featuring the board originally implemented on LaunchEnr. The board contains frequent/starred contacts and a simple implementation of notes;
 
 The app itself is very simple:
 
