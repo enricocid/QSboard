@@ -1,31 +1,31 @@
-package com.qs.board;
+package com.qs.board.utils;
 
 import android.content.Context;
 import android.preference.PreferenceManager;
 import android.util.TypedValue;
 import android.view.ContextThemeWrapper;
 
-class ThemeUtils {
+import com.qs.board.R;
+import com.qs.board.preferences.PreferenceKeys;
 
-    static final String CHOOSE_ACCENT_KEY = "pref_chooseAccent";
-
+public class ThemeUtils {
 
     //method to apply selected theme
-    static void applyTheme(ContextThemeWrapper contextThemeWrapper, Context context) {
+    public static void applyTheme(ContextThemeWrapper contextThemeWrapper, Context context) {
         int theme = resolveTheme(context);
         contextThemeWrapper.setTheme(theme);
     }
 
-    static int getColorAccent(Context context) {
+    public static int getColorAccent(Context context) {
         final TypedValue value = new TypedValue();
         context.getTheme().resolveAttribute(android.R.attr.colorAccent, value, true);
         return value.data;
     }
 
-    static int resolveColor(Context context) {
+    public static int resolveColor(Context context) {
 
         String choice = PreferenceManager.getDefaultSharedPreferences(context)
-                .getString(CHOOSE_ACCENT_KEY, String.valueOf(0));
+                .getString(PreferenceKeys.CHOOSE_ACCENT_KEY, String.valueOf(0));
 
         switch (Integer.parseInt(choice)) {
             default:
@@ -84,7 +84,7 @@ class ThemeUtils {
     private static int resolveTheme(Context context) {
 
         String choice = PreferenceManager.getDefaultSharedPreferences(context)
-                .getString(CHOOSE_ACCENT_KEY, String.valueOf(0));
+                .getString(PreferenceKeys.CHOOSE_ACCENT_KEY, String.valueOf(0));
 
         switch (Integer.parseInt(choice)) {
             default:

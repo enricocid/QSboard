@@ -8,6 +8,9 @@ import android.view.ContextThemeWrapper;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.qs.board.preferences.SettingsActivity;
+import com.qs.board.utils.ThemeUtils;
+
 public class BoardActivity extends Activity {
 
     @Override

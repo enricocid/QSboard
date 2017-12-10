@@ -1,13 +1,15 @@
-package com.qs.board;
+package com.qs.board.preferences;
 
 import android.app.ActionBar;
 import android.app.Activity;
-import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
-import android.preference.PreferenceFragment;
+import android.support.annotation.NonNull;
 import android.view.MenuItem;
 import android.widget.Toast;
+
+import com.qs.board.R;
+import com.qs.board.utils.PermissionUtils;
 
 public class SettingsActivity extends Activity {
 
@@ -49,7 +51,7 @@ public class SettingsActivity extends Activity {
     }
 
     @Override
-    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
 
         switch (requestCode) {
             case PermissionUtils.CONTACT_REQUEST_CODE: {
@@ -77,47 +79,6 @@ public class SettingsActivity extends Activity {
             PermissionUtils.requestContactPermission(this);
         } else {
             startSettings();
-        }
-    }
-
-    /**
-     * This fragment shows the preferences.
-     */
-    public static class SettingsFragment extends PreferenceFragment {
-
-        private SharedPreferences.OnSharedPreferenceChangeListener mListenerOptions;
-
-        public void onCreate(Bundle savedInstanceState) {
-            super.onCreate(savedInstanceState);
-
-            addPreferencesFromResource(R.xml.pref_general);
-
-            mListenerOptions = new SharedPreferences.OnSharedPreferenceChangeListener() {
-                @Override
-                public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
-
-                    switch (key) {
-
-                        case ThemeUtils.CHOOSE_ACCENT_KEY:
-                            getActivity().recreate();
-                            break;
-                    }
-                }
-            };
-        }
-
-        @Override
-        public void onResume() {
-            super.onResume();
-
-            getPreferenceManager().getSharedPreferences().registerOnSharedPreferenceChangeListener(mListenerOptions);
-        }
-
-        //unregister preferences changes
-        @Override
-        public void onPause() {
-            getPreferenceManager().getSharedPreferences().unregisterOnSharedPreferenceChangeListener(mListenerOptions);
-            super.onPause();
         }
     }
 }

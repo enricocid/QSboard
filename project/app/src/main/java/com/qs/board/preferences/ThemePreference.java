@@ -1,4 +1,4 @@
-package com.qs.board;
+package com.qs.board.preferences;
 
 import android.app.AlertDialog;
 import android.content.Context;
@@ -17,6 +17,9 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.RadioButton;
 import android.widget.TextView;
+
+import com.qs.board.R;
+import com.qs.board.utils.ThemeUtils;
 
 public class ThemePreference extends Preference {
 
