@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">SBboard</string>
+    <string name="thanks">Thank You :)</string>
     <string name="how">Use the QS tile or a notification, or both, to add a shortcut to SBboard on status bar :D</string>
     <string name="tile_label" translatable="false">Board</string>
     <string name="options">Options</string>

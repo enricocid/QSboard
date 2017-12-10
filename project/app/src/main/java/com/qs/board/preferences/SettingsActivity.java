@@ -39,9 +39,6 @@ public class SettingsActivity extends Activity {
 
     private void startSettings() {
 
-        Toast.makeText(this, "thankyou:)", Toast.LENGTH_SHORT)
-                .show();
-
         // Display the fragment as the main content.
         getFragmentManager().beginTransaction()
                 .replace(R.id.content_frame, new SettingsFragment())
@@ -67,6 +64,8 @@ public class SettingsActivity extends Activity {
                 if (grantResults.length > 0
                         && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     startSettings();
+                    Toast.makeText(this, getString(R.string.thanks), Toast.LENGTH_SHORT)
+                            .show();
                 }
                 break;
         }

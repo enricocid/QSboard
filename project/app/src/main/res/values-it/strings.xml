@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="how">Usa un QS tile o una notifica, o entrambe, per avere una scorciatoria di SBboard nella status bar :D</string>
+    <string name="thanks">Grazie :)</string>
     <string name="options">Opzioni</string>
     <string name="pref_theme_title">Colore accento</string>
     <string name="themesum">Cambia il colore dell\'accento</string>
