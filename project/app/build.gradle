@@ -10,6 +10,13 @@ android {
         versionCode 1
         versionName "1.0"
     }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+        disable 'MissingTranslation'
+    }
+
     buildTypes {
         release {
             minifyEnabled false
