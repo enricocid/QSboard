@@ -25,11 +25,15 @@
         android:summaryOn="@string/immersive_on"
         android:title="@string/immersive_title" />
 
-    pref_shortcutChooser
     <Preference
         android:key="pref_addNotification"
         android:summary="@string/notification_sum"
         android:title="@string/notification_title" />
+
+    <Preference
+        android:key="pref_addShortcut"
+        android:summary="@string/shortcut_sum"
+        android:title="@string/shortcut_title" />
 
     <PreferenceCategory android:title="@string/about" />
 

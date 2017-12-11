@@ -16,6 +16,8 @@
     <string name="notification_title">Add shortcut to status bar</string>
     <string name="notification_sum">Use a notification on status bar as a shortcut to SBboard</string>
     <string name="notification_content">Click to open SBboard</string>
+    <string name="shortcut_title">Add home shortcut</string>
+    <string name="shortcut_sum">Add a shortcut to the home if supported by the launcher</string>
 
     <!-- Notes -->
     <string name="u_sure">Are you sure?</string>

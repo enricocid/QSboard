@@ -15,6 +15,8 @@
     <string name="notification_title">Aggiungi scorciatoia nella status bar</string>
     <string name="notification_sum">Usa una notifica sulla status bar come scorciatoia a SBboard</string>
     <string name="notification_content">Clicca per accedere a SBboard</string>
+    <string name="shortcut_title">Aggiungi scorciatoia home</string>
+    <string name="shortcut_sum">Aggiungi una scorciatoia nella home se il launcher lo supporta</string>
 
     <!-- Note -->
     <string name="u_sure">Sicuro?</string>

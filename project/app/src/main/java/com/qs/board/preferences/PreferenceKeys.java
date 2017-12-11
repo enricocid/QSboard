@@ -7,4 +7,5 @@ public class PreferenceKeys {
     public static final String IMMERSIVE_KEY = "pref_immersiveMode";
     static final String ALPHA_KEY = "pref_alphaValue";
     static final String NOTIFICATION_KEY = "pref_addNotification";
+    static final String SHORTCUT_KEY = "pref_addShortcut";
 }
