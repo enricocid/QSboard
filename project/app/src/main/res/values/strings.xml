@@ -1,23 +1,13 @@
 <resources>
-    <string name="app_name">SBboard</string>
+
+    <!-- Permissions -->
     <string name="thanks">Thank You :)</string>
     <string name="no_permission">No permissions, no party :P</string>
+
+    <!-- Board -->
+    <string name="app_name">SBboard</string>
     <string name="hint">Hint</string>
     <string name="how">Use the QS tile or a notification, or both, to add a shortcut to SBboard on status bar :D</string>
-    <string name="options">Options</string>
-    <string name="about" translatable="false">About</string>
-    <string name="u_sure">Are you sure?</string>
-    <string name="delete">Delete</string>
-    <string name="notes">Notes</string>
-    <string name="add">Add</string>
-    <string name="note_title">Title goes here&#8230;</string>
-    <string name="note_body">Body goes here&#8230;</string>
-    <string name="note_priority">Priority</string>
-    <string name="contacts">Frequent contacts</string>
-    <string name="choose_number">Choose number</string>
-    <string name="copied">Note copied to clipboard</string>
-    <string name="share_with">Share with&#8230;</string>
-    <string name="share">Share</string>
     <string name="board_title">Change board title</string>
     <string name="board_alpha">Board alpha:&#160;</string>
     <string name="immersive_title">Immersive mode</string>
@@ -27,7 +17,34 @@
     <string name="notification_sum">Use a notification on status bar as a shortcut to SBboard</string>
     <string name="notification_content">Click to open SBboard</string>
 
-    <!-- Strings related to Settings -->
+    <!-- Notes -->
+    <string name="u_sure">Are you sure?</string>
+    <string name="delete">Delete</string>
+    <string name="notes">Notes</string>
+    <string name="add">Add</string>
+    <string name="note_title">Title goes here&#8230;</string>
+    <string name="note_body">Body goes here&#8230;</string>
+    <string name="note_priority">Priority</string>
+    <string name="copied">Note copied to clipboard</string>
+    <string name="share_with">Share with&#8230;</string>
+    <string name="share">Share</string>
+
+    <!-- Contacts -->
+    <string name="contacts">Frequent contacts</string>
+    <string name="choose_number">Choose number</string>
+
+    <!-- Options -->
+    <string name="options">Options</string>
+    <string name="about" translatable="false">About</string>
+
+    <!-- About -->
+    <string name="privacy_policy" translatable="false">Privacy policy</string>
+    <string name="privacy_policy_sum">Click to read the policy about requested permissions</string>
+    <string name="privacy_policy_link" translatable="false">https://raw.githubusercontent.com/enricocid/SBboard/master/policy</string>
+    <string name="git">Source code</string>
+    <string name="git_link" translatable="false">https://github.com/enricocid/SBboard</string>
+
+    <!-- Theme -->
     <string name="pref_theme_title">Accent color</string>
     <string name="themesum">Change the accent color</string>
     <string name="pref_theme_list" translatable="false">pref_theme_list</string>
@@ -48,10 +65,4 @@
     <string name="brown">Brown</string>
     <string name="blueGrey">Blue grey</string>
 
-    <string name="privacy_policy" translatable="false">Privacy policy</string>
-    <string name="privacy_policy_sum">Click to read the policy about requested permissions</string>
-    <string name="privacy_policy_link" translatable="false">https://raw.githubusercontent.com/enricocid/SBboard/master/policy</string>
-
-    <string name="git">Source code</string>
-    <string name="git_link" translatable="false">https://github.com/enricocid/SBboard</string>
 </resources>

@@ -15,10 +15,10 @@
         <activity
             android:name=".preferences.SettingsActivity"
             android:autoRemoveFromRecents="true"
-            android:taskAffinity=""
-            android:launchMode="singleInstance"
             android:configChanges="orientation|keyboardHidden|screenLayout|screenSize"
-            android:label="@string/app_name">
+            android:label="@string/options"
+            android:launchMode="singleInstance"
+            android:taskAffinity="">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -28,26 +28,26 @@
         <activity
             android:name=".BoardActivity"
             android:autoRemoveFromRecents="true"
-            android:taskAffinity=""
+            android:configChanges="orientation|keyboardHidden|screenLayout|screenSize"
             android:launchMode="singleInstance"
-            android:theme="@style/Theme.Transparent"
-            android:configChanges="orientation|keyboardHidden|screenLayout|screenSize">
-        </activity>
+            android:taskAffinity=""
+            android:theme="@style/Theme.Transparent"/>
+
         <service
             android:name=".QSBoardService"
             android:icon="@drawable/ic_add_circle"
             android:label="@string/app_name"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
             <intent-filter>
-                <action
-                    android:name="android.service.quicksettings.action.QS_TILE" />
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
             </intent-filter>
         </service>
 
-        <receiver android:name=".utils.NotificationUtils$NotificationReceiver"
+        <receiver
+            android:name=".utils.NotificationUtils$NotificationReceiver"
             android:exported="false">
             <intent-filter>
-                <action android:name="DISMISS"/>
+                <action android:name="DISMISS" />
             </intent-filter>
         </receiver>
     </application>

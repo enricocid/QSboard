@@ -68,7 +68,7 @@ public class ContactsRecyclerViewAdapter extends RecyclerView.Adapter<ContactsRe
 
             thumbnail = itemView.findViewById(R.id.thumbnail);
 
-            //enable click and on long click
+            //enable click
             itemView.setOnClickListener(this);
         }
 

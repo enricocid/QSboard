@@ -75,7 +75,7 @@ public class SettingsActivity extends Activity {
                             .show();
                     finish();
                 }
-            break;
+                break;
         }
     }
 

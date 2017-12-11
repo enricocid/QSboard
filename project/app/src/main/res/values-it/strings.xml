@@ -1,10 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="hint">Suggerimento</string>
-    <string name="how">Usa un QS tile o una notifica, o entrambe, per avere una scorciatoria di SBboard nella status bar :D</string>
+
+    <!-- Permessi -->
     <string name="thanks">Grazie :)</string>
     <string name="no_permission">No permessi, no party :P</string>
+
+    <!-- Board -->
+    <string name="app_name">SBboard</string>
+    <string name="hint">Suggerimento</string>
+    <string name="how">Usa un QS tile o una notifica, o entrambe, per avere una scorciatoria di SBboard nella status bar :D</string>
+    <string name="board_title">Cambia titolo board</string>
+    <string name="board_alpha">Trasparenza board:&#160;</string>
+    <string name="immersive_title">Modalità immersive</string>
+    <string name="notification_title">Aggiungi scorciatoia nella status bar</string>
+    <string name="notification_sum">Usa una notifica sulla status bar come scorciatoia a SBboard</string>
+    <string name="notification_content">Clicca per accedere a SBboard</string>
+
+    <!-- Note -->
+    <string name="u_sure">Sicuro?</string>
+    <string name="delete">Cancella</string>
+    <string name="notes">Note</string>
+    <string name="add">Aggiungi</string>
+    <string name="note_title">Qui il titolo&#8230;</string>
+    <string name="note_body">Qua il corpo&#8230;</string>
+    <string name="note_priority">Priorità</string>
+    <string name="copied">Nota copiata negli appunti</string>
+    <string name="share_with">Condividi con&#8230;</string>
+    <string name="share">Condividi</string>
+
+    <!-- Contatti -->
+    <string name="contacts">Contatti frequenti</string>
+    <string name="choose_number">Scegli numero</string>
+
+    <!-- Opzioni -->
     <string name="options">Opzioni</string>
+
+    <!-- About -->
+    <string name="privacy_policy_sum">Clicca per leggere l\'informativa sui permessi richiesti</string>
+    <string name="git">Codice sorgente</string>
+
+    <!-- Tema -->
     <string name="pref_theme_title">Colore accento</string>
     <string name="themesum">Cambia il colore dell\'accento</string>
     <string name="default_theme">Predefinito</string>
@@ -24,25 +59,4 @@
     <string name="brown">Marrone</string>
     <string name="blueGrey">Grigio blu</string>
 
-    <string name="u_sure">Sicuro?</string>
-    <string name="delete">Cancella</string>
-    <string name="notes">Note</string>
-    <string name="add">Aggiungi</string>
-    <string name="note_title">Qui il titolo&#8230;</string>
-    <string name="note_body">Qua il corpo&#8230;</string>
-    <string name="note_priority">Priorità</string>
-    <string name="contacts">Contatti frequenti</string>
-    <string name="choose_number">Scegli numero</string>
-    <string name="copied">Nota copiata negli appunti</string>
-    <string name="share_with">Condividi con&#8230;</string>
-    <string name="share">Condividi</string>
-    <string name="board_title">Cambia titolo board</string>
-    <string name="board_alpha">Trasparenza board:&#160;</string>
-    <string name="immersive_title">Modalità immersive</string>
-    <string name="notification_title">Aggiungi scorciatoia nella status bar</string>
-    <string name="notification_sum">Usa una notifica sulla status bar come scorciatoia a SBboard</string>
-    <string name="notification_content">Clicca per accedere a SBboard</string>
-
-    <string name="privacy_policy_sum">Clicca per leggere l\'informativa sui permessi richiesti</string>
-    <string name="git">Codice sorgente</string>
 </resources>

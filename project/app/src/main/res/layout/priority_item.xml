@@ -3,8 +3,8 @@
     android:id="@+id/color"
     android:layout_width="30sp"
     android:layout_height="30sp"
+    android:background="@drawable/ripple"
     android:contentDescription="@string/app_name"
     android:maxHeight="30sp"
     android:minHeight="30sp"
-    android:background="@drawable/ripple"
     android:padding="1dp" />

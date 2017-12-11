@@ -60,6 +60,7 @@ public class AddNoteDialog extends DialogFragment {
 
         final EditText title = dialogView.findViewById(R.id.title);
         final EditText note = dialogView.findViewById(R.id.note);
+
         RecyclerView priorities_rv = dialogView.findViewById(R.id.priorities_rv);
         TextView priority = dialogView.findViewById(R.id.priority);
 

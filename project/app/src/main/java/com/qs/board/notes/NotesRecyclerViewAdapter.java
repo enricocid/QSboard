@@ -295,7 +295,7 @@ public class NotesRecyclerViewAdapter extends RecyclerView.Adapter<NotesRecycler
         private TextView title, note, date;
         private View divider;
         private View actions;
-        private View close, copy, share, delete;
+        private View close, copy, share, edit, delete;
 
         SimpleViewHolder(View itemView) {
             super(itemView);
