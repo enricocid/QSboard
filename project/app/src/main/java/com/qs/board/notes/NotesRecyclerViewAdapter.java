@@ -1,20 +1,20 @@
 package com.qs.board.notes;
 
+import android.animation.Animator;
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.app.FragmentManager;
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
-import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
 import android.view.ContextThemeWrapper;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewAnimationUtils;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -43,41 +43,7 @@ public class NotesRecyclerViewAdapter extends RecyclerView.Adapter<NotesRecycler
         mNotesPriorities = priorities;
     }
 
-    static void youSureToShare(final Activity activity, final int pos) {
-
-        final RecyclerView notesRecyclerView = activity.findViewById(R.id.notesRecyclerView);
-
-        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
-                activity);
-
-        alertDialogBuilder.setTitle(activity.getString(R.string.u_sure));
-
-        alertDialogBuilder
-                .setCancelable(false)
-                .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int id) {
-
-                                dialog.dismiss();
-                                notesRecyclerView.getAdapter().notifyDataSetChanged();
-
-                            }
-                        }
-                )
-                .setPositiveButton(activity.getString(R.string.share), new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-
-                        notesRecyclerView.getAdapter().notifyDataSetChanged();
-                        shareNote(activity, pos);
-                    }
-                });
-
-        AlertDialog alertDialog = alertDialogBuilder.create();
-
-        alertDialog.show();
-
-    }
-
-    static void copyToClipboard(Activity activity, int pos) {
+    private static void copyToClipboard(Activity activity, int pos) {
 
         String body = mNotesBodies.get(pos);
         String date = mNotesDates.get(pos);
@@ -104,7 +70,7 @@ public class NotesRecyclerViewAdapter extends RecyclerView.Adapter<NotesRecycler
         activity.startActivity(Intent.createChooser(sharingIntent, activity.getString(R.string.share_with)));
     }
 
-    static void youSureToDelete(final Activity activity, final int pos) {
+    private static void youSureToDelete(final Activity activity, final int pos) {
 
         final RecyclerView notesRecyclerView = activity.findViewById(R.id.notesRecyclerView);
 
@@ -195,6 +161,79 @@ public class NotesRecyclerViewAdapter extends RecyclerView.Adapter<NotesRecycler
 
     }
 
+    private static void openOrCloseActions(final View actions, boolean show) {
+
+        if (show) {
+
+            int x = actions.getRight();
+            int y = actions.getTop();
+
+            int startRadius = 0;
+            int endRadius = (int) Math.hypot(actions.getWidth(), actions.getHeight());
+
+            Animator anim = ViewAnimationUtils.createCircularReveal(actions, x, y, startRadius, endRadius);
+
+            anim.addListener(new Animator.AnimatorListener() {
+                @Override
+                public void onAnimationStart(Animator animator) {
+
+                    actions.setVisibility(View.VISIBLE);
+                }
+
+                @Override
+                public void onAnimationEnd(Animator animator) {
+
+                }
+
+                @Override
+                public void onAnimationCancel(Animator animator) {
+
+                }
+
+                @Override
+                public void onAnimationRepeat(Animator animator) {
+
+                }
+            });
+            anim.start();
+
+        } else {
+
+            int startRadius = Math.max(actions.getWidth(), actions.getHeight());
+            int endRadius = 0;
+
+            int x = actions.getRight();
+            int y = actions.getBottom();
+
+            Animator anim = ViewAnimationUtils.createCircularReveal(actions, x, y, startRadius, endRadius);
+            anim.addListener(new Animator.AnimatorListener() {
+                @Override
+                public void onAnimationStart(Animator animator) {
+
+                }
+
+                @Override
+                public void onAnimationEnd(Animator animator) {
+
+                    actions.setVisibility(View.INVISIBLE);
+
+                }
+
+                @Override
+                public void onAnimationCancel(Animator animator) {
+
+                }
+
+                @Override
+                public void onAnimationRepeat(Animator animator) {
+
+                }
+            });
+            anim.start();
+        }
+
+    }
+
     @Override
     public SimpleViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
@@ -234,7 +273,8 @@ public class NotesRecyclerViewAdapter extends RecyclerView.Adapter<NotesRecycler
             public boolean onLongClick(View view) {
 
                 //if we have a link, the long click on item will not open our beloved dialog
-                openActionsDialog(holder.getAdapterPosition());
+                openOrCloseActions(holder.actions, true);
+
                 return false;
             }
         });
@@ -248,43 +288,68 @@ public class NotesRecyclerViewAdapter extends RecyclerView.Adapter<NotesRecycler
         return mNotesBodies.size();
     }
 
-    private void openActionsDialog(int pos) {
-
-        Bundle bundle = new Bundle();
-
-        bundle.putInt("pos", pos);
-
-        FragmentManager fm = mActivity.getFragmentManager();
-        DoSomethingDialog dialogFragment = new DoSomethingDialog();
-
-        dialogFragment.setArguments(bundle);
-        dialogFragment.show(fm, "dosomethingwithme");
-    }
-
     //simple view holder implementing click and long click listeners and with activity and itemView as arguments
     class SimpleViewHolder extends RecyclerView.ViewHolder implements View.OnLongClickListener {
 
         private ImageView priority;
         private TextView title, note, date;
         private View divider;
+        private View actions;
+        private View close, copy, share, delete;
 
         SimpleViewHolder(View itemView) {
             super(itemView);
 
-            this.divider = itemView.findViewById(R.id.divider);
-            this.title = itemView.findViewById(R.id.title);
-            this.note = itemView.findViewById(R.id.note);
-            this.date = itemView.findViewById(R.id.date);
-            this.priority = itemView.findViewById(R.id.priority);
+            divider = itemView.findViewById(R.id.divider);
+            title = itemView.findViewById(R.id.title);
+            note = itemView.findViewById(R.id.note);
+            date = itemView.findViewById(R.id.date);
+            priority = itemView.findViewById(R.id.priority);
+            actions = itemView.findViewById(R.id.actions);
+            close = itemView.findViewById(R.id.button_close);
 
             itemView.setOnLongClickListener(this);
+
+            close.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    openOrCloseActions(actions, false);
+                }
+            });
+
+            copy = itemView.findViewById(R.id.button_copy);
+
+            copy.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    copyToClipboard(mActivity, getAdapterPosition());
+                }
+            });
+
+            share = itemView.findViewById(R.id.button_share);
+
+            share.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    shareNote(mActivity, getAdapterPosition());
+                }
+            });
+
+            delete = itemView.findViewById(R.id.button_delete);
+
+            delete.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    youSureToDelete(mActivity, getAdapterPosition());
+                }
+            });
 
         }
 
         @Override
         public boolean onLongClick(View v) {
 
-            openActionsDialog(getAdapterPosition());
+            openOrCloseActions(actions, true);
             return false;
         }
     }

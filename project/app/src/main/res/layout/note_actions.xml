@@ -6,9 +6,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center"
-    android:gravity="center"
-    android:paddingBottom="8dp"
-    android:paddingTop="20dp">
+    android:background="@color/white"
+    android:gravity="center">
+
+    <!-- Close -->
+    <ImageButton
+        android:id="@+id/button_close"
+        android:layout_width="@android:dimen/app_icon_size"
+        android:layout_height="@android:dimen/app_icon_size"
+        android:layout_weight="1"
+        android:background="@drawable/ripple"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_close_black"
+        android:tint="?android:attr/colorPrimaryDark" />
 
     <!-- Copy -->
     <ImageButton
@@ -18,7 +28,8 @@
         android:layout_weight="1"
         android:background="@drawable/ripple"
         android:contentDescription="@string/app_name"
-        android:src="@drawable/ic_copy" />
+        android:src="@drawable/ic_copy"
+        android:tint="?android:attr/colorPrimaryDark" />
 
     <!-- Share -->
     <ImageButton
@@ -28,7 +39,8 @@
         android:layout_weight="1"
         android:background="@drawable/ripple"
         android:contentDescription="@string/app_name"
-        android:src="@drawable/ic_share" />
+        android:src="@drawable/ic_share"
+        android:tint="?android:attr/colorPrimaryDark" />
 
     <!-- Delete -->
     <ImageButton
@@ -38,6 +50,7 @@
         android:layout_weight="1"
         android:background="@drawable/ripple"
         android:contentDescription="@string/app_name"
-        android:src="@drawable/ic_delete" />
+        android:src="@drawable/ic_delete"
+        android:tint="?android:attr/colorPrimaryDark" />
 
 </LinearLayout>
