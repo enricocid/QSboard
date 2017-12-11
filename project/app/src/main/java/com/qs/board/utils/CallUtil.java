@@ -9,7 +9,7 @@ public class CallUtil {
 
     public static void performCall(Activity activity, String number) {
 
-        if (PermissionUtils.checkPermission(activity, PermissionUtils.CALL_PHONE)) {
+        if (!PermissionUtils.checkPermission(activity, PermissionUtils.CALL_PHONE)) {
 
             activity.requestPermissions(new String[]{Manifest.permission.CALL_PHONE}
                     , PermissionUtils.CALL_REQUEST_CODE);
