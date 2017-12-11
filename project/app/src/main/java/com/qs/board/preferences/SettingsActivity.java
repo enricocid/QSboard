@@ -6,8 +6,6 @@ import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.qs.board.R;
@@ -47,10 +45,6 @@ public class SettingsActivity extends Activity {
                 .commit();
 
         mActionBar.setDisplayHomeAsUpEnabled(true);
-
-        TextView message = findViewById(R.id.message);
-
-        message.setText(getString(R.string.how));
     }
 
     @Override
@@ -73,7 +67,7 @@ public class SettingsActivity extends Activity {
                     Toast.makeText(this, getString(R.string.thanks), Toast.LENGTH_SHORT)
                             .show();
                 }
-                break;
+            break;
         }
     }
 

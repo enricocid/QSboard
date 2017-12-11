@@ -1,5 +1,10 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <Preference
+        android:enabled="false"
+        android:title="@string/hint"
+        android:summary="@string/how"/>
+
     <PreferenceCategory android:title="@string/options" />
     <com.qs.board.preferences.ThemePreference
         android:defaultValue="0"
