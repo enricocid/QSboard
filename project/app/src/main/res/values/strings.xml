@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">SBboard</string>
     <string name="thanks">Thank You :)</string>
+    <string name="no_permission">No permissions, no party :P</string>
     <string name="hint">Hint</string>
     <string name="how">Use the QS tile or a notification, or both, to add a shortcut to SBboard on status bar :D</string>
     <string name="options">Options</string>

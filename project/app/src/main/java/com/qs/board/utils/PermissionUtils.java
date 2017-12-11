@@ -24,6 +24,6 @@ public class PermissionUtils {
     }
 
     public static boolean checkPermission(Activity activity, String code) {
-        return activity.checkSelfPermission(code) != PackageManager.PERMISSION_GRANTED;
+        return activity.checkSelfPermission(code) == PackageManager.PERMISSION_GRANTED;
     }
 }

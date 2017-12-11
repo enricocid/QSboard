@@ -56,6 +56,10 @@ public class SettingsActivity extends Activity {
                 if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
 
                     PermissionUtils.requestCallPermission(this);
+                } else {
+                    Toast.makeText(this, getString(R.string.no_permission), Toast.LENGTH_SHORT)
+                            .show();
+                    finish();
                 }
             }
             break;
@@ -66,6 +70,10 @@ public class SettingsActivity extends Activity {
                     startSettings();
                     Toast.makeText(this, getString(R.string.thanks), Toast.LENGTH_SHORT)
                             .show();
+                } else {
+                    Toast.makeText(this, getString(R.string.no_permission), Toast.LENGTH_SHORT)
+                            .show();
+                    finish();
                 }
             break;
         }
@@ -73,10 +81,16 @@ public class SettingsActivity extends Activity {
 
     private void managePermissions() {
 
-        if (PermissionUtils.checkPermission(this, PermissionUtils.READ_CONTACTS) && PermissionUtils.checkPermission(this, PermissionUtils.CALL_PHONE)) {
+        if (!PermissionUtils.checkPermission(this, PermissionUtils.READ_CONTACTS)) {
 
             PermissionUtils.requestContactPermission(this);
+
+        } else if (!PermissionUtils.checkPermission(this, PermissionUtils.CALL_PHONE)) {
+
+            PermissionUtils.requestCallPermission(this);
+
         } else {
+
             startSettings();
         }
     }
