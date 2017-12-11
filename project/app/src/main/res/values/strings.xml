@@ -23,7 +23,7 @@
     <string name="immersive_off" translatable="false">OFF</string>
     <string name="notification_title">Add shortcut to status bar</string>
     <string name="notification_sum">Use a notification on status bar as a shortcut to SBboard</string>
-    <string name="notification_content">Click to open QSboard</string>
+    <string name="notification_content">Click to open SBboard</string>
 
     <!-- Strings related to Settings -->
     <string name="pref_theme_title">Accent color</string>
