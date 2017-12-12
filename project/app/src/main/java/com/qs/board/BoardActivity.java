@@ -45,7 +45,7 @@ public class BoardActivity extends Activity {
 
         int accent = ThemeUtils.getColorAccent(this);
 
-        int alphaAccent = Color.argb(SeekBarPreference.getAlphaValue(this), Color.red(accent), Color.green(accent), Color.blue(accent));
+        int alphaAccent = Color.argb(SeekBarPreference.getSeekBarValue(this), Color.red(accent), Color.green(accent), Color.blue(accent));
         getWindow().setStatusBarColor(alphaAccent);
 
         View boardToolbar = findViewById(R.id.board_bar);
@@ -53,7 +53,7 @@ public class BoardActivity extends Activity {
 
         int bgColor = ContextCompat.getColor(this, R.color.black);
 
-        int black = Color.argb(SeekBarPreference.getAlphaValue(this), Color.red(bgColor), Color.green(bgColor), Color.blue(bgColor));
+        int black = Color.argb(SeekBarPreference.getSeekBarValue(this), Color.red(bgColor), Color.green(bgColor), Color.blue(bgColor));
 
         getWindow().setBackgroundDrawable(new ColorDrawable(black));
 
