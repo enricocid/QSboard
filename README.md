@@ -14,7 +14,7 @@ The app itself is very simple:
 - Quick contacts (frequent and starred);
 - Notes with the ability to copy, share, delete;
 
-*APK (Beta):* https://github.com/enricocid/SBboard/raw/master/app-release.apk
+*APK:* https://github.com/enricocid/SBboard/raw/master/app-release.apk
 
 *Google Play Store:* https://play.google.com/store/apps/details?id=com.qs.board
 
