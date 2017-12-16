@@ -16,6 +16,6 @@ The app itself is very simple:
 
 *APK (Beta):* https://github.com/enricocid/SBboard/raw/master/app-release.apk
 
-*Google Play Store (Beta):* https://play.google.com/apps/testing/com.qs.board
+*Google Play Store:* https://play.google.com/store/apps/details?id=com.qs.board
 
 ![ScreenShot](https://raw.githubusercontent.com/enricocid/SBboard/master/notes.gif)
