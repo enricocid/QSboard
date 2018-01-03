@@ -20,7 +20,7 @@ public class NotificationUtils {
 
         final String CHANNEL_ID = "";
 
-        String NOTIFICATION_TITLE = context.getString(R.string.app_name);
+        final String NOTIFICATION_TITLE = context.getString(R.string.app_name);
         
         NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(context, CHANNEL_ID);
 
