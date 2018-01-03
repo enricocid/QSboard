@@ -15,13 +15,12 @@ public class NotificationUtils {
 
     private static final String DISMISS_ACTION = "DISMISS";
     private static final int NOT_ID = 1;
-    private static String NOTIFICATION_TITLE;
 
     public static void addNotification(Context context) {
 
         final String CHANNEL_ID = "";
 
-        NOTIFICATION_TITLE = context.getString(R.string.app_name);
+        String NOTIFICATION_TITLE = context.getString(R.string.app_name);
         
         NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(context, CHANNEL_ID);
 
