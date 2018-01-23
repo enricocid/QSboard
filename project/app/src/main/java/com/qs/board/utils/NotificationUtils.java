@@ -48,17 +48,18 @@ public class NotificationUtils {
 
         NotificationManager notificationManager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
 
+        if (notificationManager != null) {
+            
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
 
         // Create notification channel on Android O
-        NotificationChannel channel = new NotificationChannel(NOTIFICATION_TITLE, NOTIFICATION_TITLE, notificationManager.IMPORTANCE_DEFAULT);
+        NotificationChannel channel = new NotificationChannel(NOTIFICATION_TITLE, NOTIFICATION_TITLE, NotificationManager.IMPORTANCE_DEFAULT);
         notificationManager.createNotificationChannel(channel);
 
         }
 
-        if (notificationManager != null) {
-            notificationManager.notify(NOT_ID, notificationBuilder.build());
-        }
+        notificationManager.notify(NOT_ID, notificationBuilder.build());
+
     }
 
     public static class NotificationReceiver extends BroadcastReceiver {
